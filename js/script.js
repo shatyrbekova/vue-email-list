@@ -6,14 +6,13 @@ new Vue(
         data: {
             listGeneratedEmails:[],
             listEmails: [], //ogni e-mail che viene generata verrà salvata nell'array listEmails:
-             currentEmail: 0
         }, //data si chiude qua
 
         created() {
           
-            this.getEmailsList(); //!per stampare le emails devo richiamare la funzione, per richiamare la funzioen 
+            this.getEmailsList(); //!per stampare le emails devo richiamare la funzione, per richiamare la funzione
                                  //!getEmailsList uso obbligatoriamente "THIS"
-           this.getGeneratedEmailsList();
+            this.getGeneratedEmailsList();
 
         }, //*created si chiude qua
 
@@ -26,7 +25,7 @@ new Vue(
                 for(let x=0; x <10; x++){
                     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                     .then((response) => {  // appena il server ci risponde, si attiva questa funzione
-                        this.listEmails.push(response.data.response);//ogni e-mail generata verrà pushata nell'array listEmails
+                        this.listEmails.push(response.data.response );//ogni e-mail generata verrà pushata nell'array listEmails
                     });
                 };
                 
@@ -41,7 +40,7 @@ new Vue(
                 while (emailCounted <10 ){
                     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                     .then((response) => {  // appena il server ci risponde, si attiva questa funzione
-                        this.listGeneratedEmails.push(response.data.response);//ogni e-mail generata verrà pushata nell'array listEmails
+                        this.listGeneratedEmails.push(response.data.response );//ogni e-mail generata verrà pushata nell'array listEmails
                     });
                     emailCounted++;
               }
