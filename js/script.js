@@ -45,14 +45,7 @@ new Vue(
                     });
                     emailCounted++;
               }
-              
-                //  listGeneratedEmails.forEach(element => {
-                          
-                //           emailCounted += element;
-            //   });
-              
-               
-                
+
                
 
             },

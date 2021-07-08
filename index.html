@@ -20,7 +20,7 @@
        <br>
         <div v-for="(email, index ) in listGeneratedEmails">
            <div>
-               <div v-if="listGeneratedEmails.push">
+               <div v-if="listGeneratedEmails.length === 10">
    
                 {{index}}) {{email}}
                </div>
