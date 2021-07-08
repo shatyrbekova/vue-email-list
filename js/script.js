@@ -37,7 +37,7 @@ new Vue(
             getGeneratedEmailsList: function(){
               
                 let emailCounted = 0;
-                while (emailCounted <10 ){
+                while (emailCounted < 10 ){
                     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                     .then((response) => {  // appena il server ci risponde, si attiva questa funzione
                         this.listGeneratedEmails.push(response.data.response );//ogni e-mail generata verrà pushata nell'array listEmails

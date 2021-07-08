@@ -11,6 +11,8 @@
 <body>
 
     <div id="app">
+
+        <!-- //?Come cambiare l'ordine dell'array, voglio che inizi da 1 anzichè da 0 -->
         <div v-for="(email, index ) in listEmails" v-if="index >= 1">
               
                    {{index}}) {{email}}
@@ -18,7 +20,7 @@
        <br>
        <br>
        <br>
-        <div v-for="(email, index ) in listGeneratedEmails" v-if="index >= 1">
+        <div v-for="(email, index ) in listGeneratedEmails" >
            <div>
                <div v-if="listGeneratedEmails.length === 10"  >
    
